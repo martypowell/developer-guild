@@ -1,0 +1,18 @@
+[
+    {
+        "name": "Marty",
+        "about": "<3 web development and user interfaces.",
+        "master": ["Javascript", "CSS", "Visual Studio Code", "NPM", "County Website"],
+        "journeyman": ["SQL", "MVC", "Angular", ".net", "APIs", "Visual Studio"],
+        "apprentice": ["Python", "Unit Testing", "Metro Finance", "Sql Developer"],
+        "help-me-please": ["Documentation", "Integration Testing", "Automation", "Application Architecture"]
+    },
+    {
+        "name": "Mike",
+        "about": "Ton of experience in full stack microsoft development. I'm pretty good a making things sound cheeky and clever",
+        "master": [".net", "Javascript", "CSS", "Visual Studio Code", "NPM", "County Website", "BCPL"],
+        "journeyman": ["SQL", "MVC", "Angular", "APIs"],
+        "apprentice": ["Sql", "Integration Testing", "SqlServer"],
+        "help-me-please": ["MySql", "PHP"]
+    }
+]
