@@ -1,0 +1,149 @@
+[
+  {
+    "name": "Marty",
+    "about": "<3 web development and user interfaces.",
+    "languages": [
+      "Javascript",
+      "CSS/Sass",
+      "SQL",
+      "Python",
+      "PHP"
+    ],
+    "tools": [
+      "Visual Studio Code",
+      "Visual Studio",
+      "NPM",
+      "Gulp",
+      "Git/Github",
+      "TFS"
+    ],
+    "frameworks": [
+      "Twitter Bootstrap",
+      "Angular",
+      ".net MVC",
+      "React"
+    ],
+    "concepts": [
+      "MVC",
+      "APIs",
+      "Source Control",
+      "Dependency Injection"
+    ]
+  },
+  {
+    "name": "Mike",
+    "about": "Ton of experience in full stack microsoft development. I'm pretty good a making things sound cheeky and clever",
+    "languages": [
+      "Javascript",
+      "CSS",
+      "SQL",
+      "Python",
+      "PHP"
+    ],
+    "tools": [
+      "Visual Studio Code",
+      "Visual Studio",
+      "NPM",
+      "Gulp",
+      "Git/Github",
+      "TFS"
+    ],
+    "frameworks": [
+      "Twitter Bootstrap",
+      "Angular",
+      ".net MVC",
+      "React"
+    ],
+    "concepts": [
+      "MVC",
+      "APIs",
+      "Source Control",
+      "Dependency Injection"
+    ]
+  },
+  {
+    "name": "Stuart",
+    "about": "I was popular character on MAD Tv (I did not provide an about me)",
+    "languages": [
+      ""
+    ],
+    "tools": [
+      "APEX",
+      "Office",
+      "Sharepoint",
+      "Crystal Reports"
+    ],
+    "subjectMatter": [
+      "Library",
+      "EPS"
+    ]
+  },
+  {
+    "name": "Anthony",
+    "about": "Thinks everything should be automated (this record was automatically generated on Thu Jul 27 2017 09:12:58 GMT-0400 (Eastern Daylight Time))",
+    "languages": [
+      "C#",
+      "Javascript",
+      "Python",
+      "SQL",
+      "VBScript"
+    ],
+    "tools": [
+      "Visual Studio",
+      "Espresso",
+      "TFS",
+      "Cygwin",
+      "TableCompare"
+    ],
+    "frameworks": [
+      "Twitter Bootstrap",
+      ".net MVC",
+      "ASP Classic"
+    ],
+    "concepts": [
+      "Unit Testing",
+      "MVC",
+      "APIs",
+      "Source Control",
+      "Dependency Injection"
+    ],
+    "subjectMatter": [
+      "Public Safety",
+      "Fire",
+      "Police",
+      "911",
+      "Metro"
+    ]
+  },
+  {
+    "name": "Glenn",
+    "about": "The young guy: application programming (back-end)",
+    "languages": [
+      "C#",
+      "Javascript",
+      "VB",
+      "SQL",
+      "PL/SQL"
+    ],
+    "tools": [
+      "Visual Studio",
+      "Eclipse",
+      "TFS",
+      "SoapUI",
+      "LinqPad",
+      "GIMP"
+    ],
+    "frameworks": [
+      ".net MVC",
+      "ASP Classic",
+      "Twitter Bootstrap"
+    ],
+    "concepts": [
+      "Reality"
+    ],
+    "subjectMatter": [
+      "Police",
+      "Metro"
+    ]
+  }
+]
