@@ -1,0 +1,27 @@
+<div ng-controller="MembersCtrl as ctrl" ng-cloak>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3 col-xs-12">
+                <h1>Development Guild</h1>
+            </div>
+        </div>
+
+        <div class="member-list" ng-repeat="member in ctrl.members track by $index">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3 col-xs-12">
+                    <div class="member">
+                        <div class="row">
+                            <div class="col-sm-3 col-xs-12">
+                                <span>Picture Goes Here</span>
+                            </div>
+                            <div class="col-sm-9 col-xs-12">
+                                <h2>{{member.name}}</h2>
+                                <p>{{member.about}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
