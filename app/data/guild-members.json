@@ -244,5 +244,47 @@
       "Technical Writing",
       "Request Processing"
     ]
+  },
+  {
+    "name": "Bob",
+    "about": "Providing users with an end product that meets the business needs and offers the maximum of ease of use, reliability and maintenance.",
+    "languages": [
+      "VB",
+      "Javascript",
+      "SQL",
+      "PL/SQL",
+      "PHP",
+      "HTML",
+      "CSS",
+      "RPG",
+      "COBOL"
+    ],
+    "tools": [
+      "APEX",
+      "Office",
+      "Sharepoint",
+      "Access"
+    ],
+    "frameworks": [
+      "Twitter Bootstrap",
+      ".net MVC",
+      ".net Core",
+      "Entity Framework",
+      "ASP Classic",
+      "Twitter Bootstrap",
+      "Metastorm"
+    ],
+    "concepts": [
+      "OOP"
+    ],
+    "subjectMatter": [
+      "Housing",
+      "Retirement",
+      "Aging",
+      "Utilities",
+      "Fire Hydrant Meter Load",
+      "EPS",
+      "Zoning Case History"
+    ]
   }
 ]
