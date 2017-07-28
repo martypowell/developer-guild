@@ -4,7 +4,9 @@
     "about": "<3 web development and user interfaces.",
     "languages": [
       "Javascript",
-      "CSS/Sass",
+      "CSS",
+      "Sass",
+      "HTML",
       "SQL",
       "Python",
       "PHP"
@@ -28,14 +30,20 @@
       "APIs",
       "Source Control",
       "Dependency Injection"
+    ],
+    "subjectMatter": [
+      "BaltimoreCountyMD.gov"
     ]
   },
   {
     "name": "Mike",
-    "about": "Ton of experience in full stack microsoft development. I'm pretty good a making things sound cheeky and clever",
+    "about": "Always happy to help and loves learning new things.",
     "languages": [
+      "C#",
+      "HTML",
       "Javascript",
       "CSS",
+      "Sass",
       "SQL",
       "Python",
       "PHP"
@@ -43,6 +51,12 @@
     "tools": [
       "Visual Studio Code",
       "Visual Studio",
+      "SQL Server Management Studio",
+      "Azure",
+      "IIS",
+      "ANTS",
+      "MS SQL Server",
+      "MongoDB",
       "NPM",
       "Gulp",
       "Git/Github",
@@ -51,21 +65,55 @@
     "frameworks": [
       "Twitter Bootstrap",
       "Angular",
+      "jQuery",
+      "Node.js",
+      ".net Webforms",
       ".net MVC",
-      "React"
+      ".net Web API",
+      "Material Design",
+      "Selenium"
     ],
     "concepts": [
+      "Application Architecture",
+      "Relational Data",
+      "Non-relational Data",
+      "REST",
       "MVC",
       "APIs",
       "Source Control",
-      "Dependency Injection"
+      "Dependency Injection",
+      "IOC Containers",
+      "Unit Testing",
+      "Automated UI Testing",
+      "Content Management Systems (web)",
+      "Design Patterns"
+    ],
+    "subjectMatter": [
+      "BaltimoreCountyMD.gov",
+      "PowerOfAgeExpo.com",
+      "Library",
+      "BCPL.info"
     ]
   },
   {
     "name": "Stuart",
-    "about": "I was popular character on MAD TV (I did not provide an about)",
+    "about": "Utilizing the tools in front of me to develop faster and efficient applications.",
     "languages": [
-      ""
+      "VB/VBA",
+      "C#",
+      "Javascript",
+      "Python",
+      "SQL",
+      "PL/SQL",
+      "C++",
+      "Java",
+      "C",
+      "HTML",
+      "CSS",
+      "PHP",
+      "Ruby",
+      "R",
+      "F#"
     ],
     "tools": [
       "APEX",
