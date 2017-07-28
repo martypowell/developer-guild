@@ -17,7 +17,8 @@
       "NPM",
       "Gulp",
       "Git/Github",
-      "TFS"
+      "TFS",
+      "Postman"
     ],
     "frameworks": [
       "Twitter Bootstrap",
@@ -193,6 +194,55 @@
     "subjectMatter": [
       "Police",
       "Metro"
+    ]
+  },
+  {
+    "name": "Jim",
+    "about": "Middle Tier and API",
+    "languages": [
+      "C#",
+      "Javascript",
+      "XSLT",
+      "SQL",
+      "XSD",
+      "XML",
+      "HTML",
+      "CSS",
+      "Python",
+      "Regex"
+    ],
+    "tools": [
+      "Visual Studio",
+      "Crystal Reports",
+      "TFS",
+      "Linux",
+      "Postman",
+      "GIMP",
+      "SQL Developer"
+    ],
+    "frameworks": [
+      "Twitter Bootstrap",
+      ".net MVC",
+      ".net Core",
+      "Entity Framework",
+      "ASP Classic",
+      "Twitter Bootstrap",
+      "Metastorm"
+    ],
+    "concepts": [
+      "MVC",
+      "APIs",
+      "Source Control",
+      "Dependency Injection",
+      "OOP",
+      "Agile",
+      "ETL"
+    ],
+    "subjectMatter": [
+      "Land Management",
+      "Fasttrack",
+      "Technical Writing",
+      "Request Processing"
     ]
   }
 ]
