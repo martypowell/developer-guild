@@ -14,17 +14,57 @@
 
     .factory('membersService', ['$http', membersService])
 
-    .controller('MembersCtrl', ['$scope', 'membersService', 'knowledgeService', function ($scope, membersService, knowledgeService) {
+    .controller('MembersCtrl', ['$scope', '$window', 'membersService', 'knowledgeService', function ($scope, $window, membersService, knowledgeService) {
       var self = this;
       self.members = [];
       membersService.Get().then(function (members) {
         self.members = self.members.concat(members);
+        self.filteredMembers = self.members;
         $scope.$digest();
       });
 
-      knowledgeService.Get().then(function(knowledgeList) {
-        console.log('knowledgeList', knowledgeList);
+      knowledgeService.Get().then(function (knowledgeList) {
+        self.knowledgeList = knowledgeList.sort(function (itemA, itemB) {
+          return itemB.count - itemA.count;
+        });
+        $scope.$digest();
       });
+
+      self.filterKnowledge = filterKnowledge;
+      self.knowledgeSelection = "";
+      self.activeKnowledgeItem = "";
+
+      self.clearFilter = function() { 
+        self.filterText = "";
+        self.activeKnowledgeItem = {};
+      };
+
+      function filterKnowledge(item) {
+        //Set the active item
+        self.activeKnowledgeItem = item;
+
+        self.filteredMembers = self.members.filter(function(member) {
+          var isMatch = false;
+          var typeArr;
+            for (var key in member) {
+              typeArr = member[key];
+              if (Array.isArray(typeArr)) {
+                var valArr = typeArr.map(function (item) {
+                  return item.toUpperCase();
+                });
+
+                var matches = valArr.filter(function(val) {
+                  return val === item.value.toUpperCase();
+                });
+
+                if (matches.length) {
+                  isMatch = true;
+                }
+              }
+            }
+            return isMatch;
+        });
+      }
     }]);
 
   function knowledgeService($http) {
@@ -45,14 +85,13 @@
               if (Array.isArray(typeArr)) {
 
                 typeArr.forEach(function (type) {
-                  let existingItem = knowledgeList.filter(function(item) {
+                  let existingItem = knowledgeList.filter(function (item) {
                     return item.value === type;
                   });
 
                   if (existingItem.length) {
                     existingItem[0].count += 1;
-                  }
-                  else {
+                  } else {
                     knowledgeList.push({
                       type: key,
                       value: type,
@@ -114,6 +153,8 @@
         });
       });
     }
+
+    
 
     return {
       Get: get

@@ -1,15 +1,15 @@
 <div ng-controller="MembersCtrl as ctrl" ng-cloak>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-6 col-md-offset-3 col-xs-12">
+            <div class="col-md-6 col-xs-12">
                 <h1>Development Guild</h1>
             </div>
         </div>
 
-        <div class="member-list" ng-repeat="member in ctrl.members track by $index">
+        <div class="app-container">
             <div class="row">
-                <div class="col-md-6 col-md-offset-3 col-xs-12">
-                    <div class="member">
+                <div class="col-md-6 col-xs-12">
+                    <div class="member" ng-repeat="member in ctrl.filteredMembers | filter:{$:knowledgeSelection}:true">
                         <div class="row">
                             <div class="col-sm-3 col-xs-12">
                                 <span>Picture Goes Here</span>
@@ -19,6 +19,23 @@
                                 <p>{{member.about}}</p>
                             </div>
                         </div>
+                    </div>
+                </div>
+                <div class="col-md-6  col-xs-12">
+                    <div id="knowledgeList">
+                        <div class="filter-container">
+                            <input class="form-control" placeholder="Filter results here" type="text" id="knowledgeFilter" ng-model="filterText" />
+                            <a href="#" ng-click="clearFilter">Clear</a>
+                        </div>
+                        <ul class="list-group">
+                            <li ng-click="ctrl.filterKnowledge(item)" ng-repeat="item in ctrl.knowledgeList | filter:filterText" 
+                                class="list-group-item justify-content-between list-button"
+                                ng-class="{active : ctrl.activeKnowledgeItem === item}">
+                                {{item.value}}
+                                <span class="badge badge-default badge-pill">{{item.count}}</span>
+                                <span class="badge badge-default badge-pill">{{item.type}}</span>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
