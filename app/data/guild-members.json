@@ -286,5 +286,27 @@
       "EPS",
       "Zoning Case History"
     ]
+  },
+  {
+    "name": "Bill",
+    "about": "Efficiency.  Can we streamline it?  Can we reduce the people involved?  Can we make it faster?  Can we save the county money and keep my tax bill down?",
+    "languages": [
+      "SQL"
+    ],
+    "tools": [
+      "Sql Server Management Studio",
+      "Sql Developer",
+      "Crystal Reports"
+    ],
+    "frameworks": [
+    ],
+    "concepts": [
+    ],
+    "subjectMatter": [
+      "Envision Connect",
+      "Cass Works",
+      "Health",
+      "Public Works"
+    ]
   }
 ]
