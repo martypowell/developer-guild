@@ -2,6 +2,7 @@
   {
     "name": "Marty",
     "about": "<3 web development and user interfaces.",
+    "img": "//bcgphp/developer-guild/img/marty.jpg",
     "languages": [
       "Javascript",
       "CSS",
@@ -248,6 +249,7 @@
   {
     "name": "Bob",
     "about": "Providing users with an end product that meets the business needs and offers the maximum of ease of use, reliability and maintenance.",
+    "img": "//bcgphp/developer-guild/img/bob.png",
     "languages": [
       "VB",
       "Javascript",

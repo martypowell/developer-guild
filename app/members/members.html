@@ -12,9 +12,7 @@
           <div id="knowledgeList">
             <div class="filter-container">
               <input class="form-control" placeholder="Filter results here" type="text" id="knowledgeFilter" ng-model="filterText" />
-              <a href="#" class="clear-btn" 
-                ng-click="clearFilter"
-                ng-show="filterText.length || ctrl.activeKnowledgeItem.value">Clear</a>
+              <a href="#" class="clear-btn" ng-click="clearFilter" ng-show="filterText.length || ctrl.activeKnowledgeItem.value">Clear</a>
             </div>
             <div class="list-group-container">
               <ul class="list-group">
@@ -33,14 +31,16 @@
             <div class="row">
               <div class="col-xs-12">
                 <div class="member">
-                  <h2>{{member.name}}</h2>
-                  <p>{{member.about}}</p>
+                  <img ng-show="member.img && member.img.length" class="list-img" src="{{member.img}}" />
+                  <div>
+                    <h2>{{member.name}}</h2>
+                    <p>{{member.about}}</p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-
       </div>
     </div>
   </div>
