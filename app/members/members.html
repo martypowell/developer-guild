@@ -1,43 +1,47 @@
 <div ng-controller="MembersCtrl as ctrl" ng-cloak>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-6 col-xs-12">
-                <h1>Development Guild</h1>
-            </div>
-        </div>
-
-        <div class="app-container">
-            <div class="row">
-                <div class="col-md-6  col-xs-12">
-                    <div id="knowledgeList">
-                        <div class="filter-container">
-                            <input class="form-control" placeholder="Filter results here" type="text" id="knowledgeFilter" ng-model="filterText" />
-                            <a href="#" ng-click="clearFilter">Clear</a>
-                        </div>
-                        <ul class="list-group">
-                            <li ng-click="ctrl.filterKnowledge(item)" ng-repeat="item in ctrl.knowledgeList | filter:filterText" class="list-group-item justify-content-between list-button"
-                                ng-class="{active : ctrl.activeKnowledgeItem === item}">
-                                {{item.value}}
-                                <span class="badge badge-default badge-pill">{{item.count}}</span>
-                                <span class="badge badge-default badge-pill">{{item.type}}</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-6 col-xs-12">
-                    <div ng-repeat="member in ctrl.filteredMembers | filter:{$:knowledgeSelection}:true">
-                        <div class="row">
-                            <div class="col-xs-12">
-                                <div class="member">
-                                    <h2>{{member.name}}</h2>
-                                    <p>{{member.about}}</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-6 col-xs-12">
+        <h1>Development Guild</h1>
+      </div>
     </div>
+
+    <div class="app-container">
+      <div class="row">
+        <div class="col-md-6  col-xs-12">
+          <div id="knowledgeList">
+            <div class="filter-container">
+              <input class="form-control" placeholder="Filter results here" type="text" id="knowledgeFilter" ng-model="filterText" />
+              <a href="#" class="clear-btn" 
+                ng-click="clearFilter"
+                ng-show="filterText.length || ctrl.activeKnowledgeItem.value">Clear</a>
+            </div>
+            <div class="list-group-container">
+              <ul class="list-group">
+                <li ng-click="ctrl.filterKnowledge(item)" ng-repeat="item in ctrl.knowledgeList | filter:filterText" class="list-group-item justify-content-between list-button"
+                  ng-class="{active : ctrl.activeKnowledgeItem === item}">
+                  {{item.value}}
+                  <span class="badge badge-default badge-pill">{{item.count}}</span>
+                  <span class="badge badge-default badge-pill">{{item.type}}</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-xs-12">
+          <div ng-repeat="member in ctrl.filteredMembers | filter:{$:knowledgeSelection}:true">
+            <div class="row">
+              <div class="col-xs-12">
+                <div class="member">
+                  <h2>{{member.name}}</h2>
+                  <p>{{member.about}}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
 </div>

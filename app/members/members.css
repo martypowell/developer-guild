@@ -16,3 +16,17 @@
 .list-button:hover {
     background: #e0e0e0;
 }
+
+.list-group-container {
+  height: 700px;
+  overflow-y: scroll;
+}
+
+.filter-container {
+  position: relative;
+}
+.filter-container .clear-btn {
+  position: absolute;
+  right: 14px;
+  top: 8px;
+}
