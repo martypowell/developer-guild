@@ -266,13 +266,6 @@
       "Access"
     ],
     "frameworks": [
-      "Twitter Bootstrap",
-      ".net MVC",
-      ".net Core",
-      "Entity Framework",
-      "ASP Classic",
-      "Twitter Bootstrap",
-      "Metastorm"
     ],
     "concepts": [
       "OOP"
