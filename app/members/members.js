@@ -45,6 +45,35 @@
           .then(getKnowledgeSuccess)
           .catch(errorCallback);
 
+        self.filterKnowledge = filterKnowledge;
+
+        function filterKnowledge(item) {
+        //Set the active item
+        self.activeKnowledgeItem = item;
+
+        self.filteredMembers = self.members.filter(function(member) {
+          var isMatch = false;
+          var typeArr;
+            for (var key in member) {
+              typeArr = member[key];
+              if (Array.isArray(typeArr)) {
+                var valArr = typeArr.map(function (item) {
+                  return item.toUpperCase();
+                });
+
+                var matches = valArr.filter(function(val) {
+                  return val === item.value.toUpperCase();
+                });
+
+                if (matches.length) {
+                  isMatch = true;
+                }
+              }
+            }
+            return isMatch;
+        });
+      }
+
         function getKnowledgeSuccess(knowledgeList) {
           self.knowledgeList = knowledgeList.sort(function (itemA, itemB) {
             return itemB.count - itemA.count;
