@@ -9,12 +9,22 @@
     // 'developmentGuild.view2',
     // 'developmentGuild.version'
   ]).
-  config(['$locationProvider', '$routeProvider', '$httpProvider', 
-    function ($locationProvider, $routeProvider, $httpProvider) {
-    $locationProvider.hashPrefix('!');
+    config(['$locationProvider', '$routeProvider', '$httpProvider',
+      function ($locationProvider, $routeProvider, $httpProvider) {
+        $locationProvider.hashPrefix('!');
 
-    $routeProvider.otherwise({
-      redirectTo: '/members'
-    });
-  }]);
+        $routeProvider
+          .when('/members', {
+            templateUrl: 'members/members.html',
+            controller: 'MembersCtrl'
+          }).when('/member/:name', {
+            templateUrl: 'members/member.html',
+            controller: 'MemberCtrl'
+          }).when('/tools', {
+            templateUrl: 'tools/tools.html',
+            controller: 'ToolsCtrl'
+          }).otherwise({
+            redirectTo: '/members'
+          });
+      }]);
 })();

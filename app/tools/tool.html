@@ -1,0 +1,8 @@
+<div ng-controller="ToolCtrl as ctrl" ng-cloak>
+  <h2>{{ctrl.tool.name}}</h2>
+
+  <h2>People using this tool.</h2>
+  <ul>
+    <li ng-repeat="member in ctrl.tool.members"><a ng-href="#!/tools/{{member.name}}">{{member.name}}</a></li>
+  </ul>
+</div>

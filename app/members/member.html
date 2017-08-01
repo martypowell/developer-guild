@@ -18,7 +18,7 @@
     <div ng-show="ctrl.member.tools.length">
       <h3>Tools</h3>
       <ul>
-        <li ng-repeat="tool in ctrl.member.tools">{{tool}}</li>
+        <li ng-repeat="tool in ctrl.member.tools"><a ng-href="#!/tools/{{tool}}">{{tool}}</a></li>
       </ul>
     </div>
 
@@ -42,6 +42,6 @@
         <li ng-repeat="subject in ctrl.member.subjectMatter">{{subject}}</li>
       </ul>
     </div>
-    
+
   </div>
 </div>
