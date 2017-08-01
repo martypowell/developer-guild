@@ -33,7 +33,7 @@
                 <div class="member">
                   <img ng-show="member.img && member.img.length" class="list-img" src="{{member.img}}" />
                   <div>
-                    <h2>{{member.name}}</h2>
+                    <h2><a ng-href="#!/member/{{member.name}}">{{member.name}}</a></h2>
                     <p>{{member.about}}</p>
                   </div>
                 </div>

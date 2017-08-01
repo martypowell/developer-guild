@@ -3,13 +3,6 @@
 
   angular.module('developmentGuild.members', ['ngRoute'])
 
-    .config(['$routeProvider', function ($routeProvider) {
-      $routeProvider.when('/members', {
-        templateUrl: 'members/members.html',
-        controller: 'MembersCtrl'
-      });
-    }])
-
     .controller('MembersCtrl', ['$scope', '$window', '$log', 'membersService', 'knowledgeService',
       function ($scope, $window, $log, membersService, knowledgeService) {
 

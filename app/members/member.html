@@ -1,0 +1,47 @@
+<div ng-controller="MemberCtrl as ctrl" ng-cloak>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-6 col-xs-12">
+        <h1>Development Guild</h1>
+      </div>
+    </div>
+    <h2>{{ctrl.member.name}}</h2>
+    <p>{{ctrl.member.about}}</p>
+
+    <div ng-show="ctrl.member.languages.length">
+      <h3>Languages</h3>
+      <ul>
+        <li ng-repeat="language in ctrl.member.languages">{{language}}</li>
+      </ul>
+    </div>
+
+    <div ng-show="ctrl.member.tools.length">
+      <h3>Tools</h3>
+      <ul>
+        <li ng-repeat="tool in ctrl.member.tools">{{tool}}</li>
+      </ul>
+    </div>
+
+    <div ng-show="ctrl.member.frameworks.length">
+      <h3>Frameworks</h3>
+      <ul>
+        <li ng-repeat="framework in ctrl.member.frameworks">{{framework}}</li>
+      </ul>
+    </div>
+
+    <div ng-show="ctrl.member.concepts.length">
+      <h3>Concepts</h3>
+      <ul>
+        <li ng-repeat="concept in ctrl.member.concepts">{{concept}}</li>
+      </ul>
+    </div>
+
+    <div ng-show="ctrl.member.subjectMatter.length">
+      <h3>Subject Matter</h3>
+      <ul>
+        <li ng-repeat="subject in ctrl.member.subjectMatter">{{subject}}</li>
+      </ul>
+    </div>
+    
+  </div>
+</div>
