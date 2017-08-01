@@ -12,16 +12,18 @@
 
     .factory('knowledgeService', ['$http', knowledgeService])
 
-    .factory('membersService', ['$http', membersService])
-
     .controller('MembersCtrl', ['$scope', '$window', 'membersService', 'knowledgeService', function ($scope, $window, membersService, knowledgeService) {
       var self = this;
       self.members = [];
-      membersService.Get().then(function (members) {
+
+      self.members = membersService.Get();
+      self.filteredMembers = self.members;
+
+      /* membersService.Get().then(function (members) {
         self.members = self.members.concat(members);
-        self.filteredMembers = self.members;
+        
         $scope.$digest();
-      });
+      }); */
 
       knowledgeService.Get().then(function (knowledgeList) {
         self.knowledgeList = knowledgeList.sort(function (itemA, itemB) {
@@ -110,51 +112,6 @@
         });
       });
     }
-
-    return {
-      Get: get
-    };
-  }
-
-  function membersService($http) {
-    function get() {
-      return new Promise(function (resolve, reject) {
-        $http({
-          method: 'GET',
-          url: '/data/guild-members.json',
-          cache: true
-        }).then(function successCallback(response) {
-
-          if (response && response) {
-            var members = response.data || [];
-            members = members.sort(function (a, b) {
-              var nameA = a.name.toUpperCase(); // ignore upper and lowercase
-              var nameB = b.name.toUpperCase(); // ignore upper and lowercase
-              if (nameA < nameB) {
-                return -1;
-              }
-              if (nameA > nameB) {
-                return 1;
-              }
-
-              // names must be equal
-              return 0;
-            });
-            resolve(members);
-          }
-          reject(response);
-          // this callback will be called asynchronously
-          // when the response is available
-        }, function errorCallback(response) {
-          // called asynchronously if an error occurs
-          // or server returns response with an error status.
-          console.error('something went wrong retreiving members');
-          reject(response);
-        });
-      });
-    }
-
-    
 
     return {
       Get: get
