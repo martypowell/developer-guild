@@ -18,10 +18,11 @@
         self.knowledgeSelection = "";
         self.activeKnowledgeItem = "";
 
-        self.clearFilter = function () {
-          self.filterText = "";
-          self.activeKnowledgeItem = {};
-        };
+        /**
+         * Events
+         */
+        self.filterKnowledge = filterKnowledge;
+        self.clearFilter = clearFilter;
 
         /**
          * Get Members 
@@ -45,15 +46,18 @@
           .then(getKnowledgeSuccess)
           .catch(errorCallback);
 
-        self.filterKnowledge = filterKnowledge;
+        function clearFilter() {
+          self.filterText = "";
+          self.activeKnowledgeItem = {};
+        }
 
         function filterKnowledge(item) {
-        //Set the active item
-        self.activeKnowledgeItem = item;
+          //Set the active item
+          self.activeKnowledgeItem = item;
 
-        self.filteredMembers = self.members.filter(function(member) {
-          var isMatch = false;
-          var typeArr;
+          self.filteredMembers = self.members.filter(function (member) {
+            var isMatch = false;
+            var typeArr;
             for (var key in member) {
               typeArr = member[key];
               if (Array.isArray(typeArr)) {
@@ -61,7 +65,7 @@
                   return item.toUpperCase();
                 });
 
-                var matches = valArr.filter(function(val) {
+                var matches = valArr.filter(function (val) {
                   return val === item.value.toUpperCase();
                 });
 
@@ -71,8 +75,8 @@
               }
             }
             return isMatch;
-        });
-      }
+          });
+        }
 
         function getKnowledgeSuccess(knowledgeList) {
           self.knowledgeList = knowledgeList.sort(function (itemA, itemB) {
@@ -82,7 +86,7 @@
 
         function errorCallback(errorMsg) {
           $log.error("Error: " + errorMsg);
-        } 
-        
+        }
+
       }]);
 })(angular.module('developmentGuild'));
