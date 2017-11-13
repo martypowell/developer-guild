@@ -10,7 +10,8 @@
     };
 
     function get() {
-      return $http.get('/data/guild-members.json', {
+      return $http.get('../data/guild-members.json', {
+      //return $http.get('//bcgphp/developer-guild/data/guild-members.json', {
         transformResponse: transformMembersIntoKnowledge
       })
         .then(sendKnowledgeResponseData)

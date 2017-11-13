@@ -1,21 +1,47 @@
 (function (app) {
   'use strict';
 
-  app.factory('membersService', ['$http', '$q', memberService]);
+  app.factory('membersService', ['$http', '$q', '$cacheFactory', memberService]);
 
-  function memberService($http, $q) {
+  function memberService($http, $q, $cacheFactory) {
     return {
       Get: get,
       GetByName: getByName
     };
 
     function get() {
+      /* var deferred = $.defer();
+      var membersCache = $cacheFactory.get('membersCache');
+
+      if (!membersCache) {
+        membersCache = $cacheFactory('membersCache');
+      }
+
+      var membersFromCache = membersCache.get('all');
+
+      if (membersFromCache) {
+        //Load data from cache
+      }
+      else {
+        //Load data from "server"
+      } */
+
       //return $http.get('//bcgphp/developer-guild/data/guild-members.json', {
       return $http.get('../data/guild-members.json', {
+        cache: true, //memeberCache object
         transformResponse: sortMemberData
       })
         .then(sendMemberResponseData)
         .catch(sendMemberServiceError);
+    }
+
+    array.forEach(function(element) {
+      
+    }, this);
+
+    function deleteMembersResponseFromCache() {
+      var httpCache = $cacheFactory('$http');
+      httpCache.remove('../data/guild-members.json');
     }
 
     function sortMemberData(response, headerGetter) {
